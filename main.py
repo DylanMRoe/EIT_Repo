@@ -2,10 +2,9 @@ from Region_File import Region
 from Object_Collection import MatrixObj
 from matplotlib import pyplot as plt
 import pandas as pd
+import numpy as np
 
 if __name__ == "__main__":
-    csvFile = pd.read_csv("./test_matrix.csv")
-    matrix = MatrixObj(csvFile)
+    matrix_obj = MatrixObj(4, False)
 
-    plt.imshow(matrix.pixel_vals, cmap="gray")
-    plt.show()
+    print(matrix_obj.matrix)
